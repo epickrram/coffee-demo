@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="coffeeApp">
 <head>
     <title>Trisha's amazing coffee app</title>
 </head>
 <body>
+    <div ng-controller="DrinksController" class="container">
+        <form>
+            <label for="drink.type">Drink</label>
+            <select ng-model="drink.type" ng-options="type.name for type in types"></select>
 
+        </form>
+
+    </div>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/coffee.js"></script>
 </body>
 </html>
