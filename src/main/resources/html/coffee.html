@@ -2,14 +2,20 @@
 <html lang="en" ng-app="coffeeApp">
 <head>
     <title>Trisha's amazing coffee app</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
     <div ng-controller="DrinksController" class="container">
         <form>
-            <label for="drink.type">Drink</label>
-            <select ng-model="drink.type" ng-options="type.name for type in types | orderBy: 'name'"></select>
-            <label for="drink.size">Size</label>
-            <select ng-model="drink.size" ng-options="size for size in sizes"></select>
+            <div class="form-group">
+                <label for="drink.type" class="form-control">Drink</label>
+                <select ng-model="drink.type" ng-options="type.name for type in types | orderBy: 'name'" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label for="drink.size" class="form-control">Size</label>
+                <select ng-model="drink.size" ng-options="size for size in sizes" class="form-control"></select>
+            </div>
 
         </form>
 
