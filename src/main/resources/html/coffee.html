@@ -8,6 +8,8 @@
         <form>
             <label for="drink.type">Drink</label>
             <select ng-model="drink.type" ng-options="type.name for type in types | orderBy: 'name'"></select>
+            <label for="drink.size">Size</label>
+            <select ng-model="drink.size" ng-options="size for size in sizes"></select>
 
         </form>
 
