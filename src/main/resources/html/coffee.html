@@ -7,7 +7,7 @@
     <div ng-controller="DrinksController" class="container">
         <form>
             <label for="drink.type">Drink</label>
-            <select ng-model="drink.type" ng-options="type.name for type in types"></select>
+            <select ng-model="drink.type" ng-options="type.name for type in types | orderBy: 'name'"></select>
 
         </form>
 
