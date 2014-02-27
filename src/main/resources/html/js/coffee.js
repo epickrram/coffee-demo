@@ -16,6 +16,6 @@ coffeeApp.controller('DrinksController', function ($scope, CoffeeOrder) {
     $scope.sizes = ['Small', 'Medium', 'Large']
 
     $scope.giveMeCoffee = function() {
-        CoffeeOrder.save($scope.drink)
+        CoffeeOrder.save({id: 1}, $scope.drink)
     }
 })
